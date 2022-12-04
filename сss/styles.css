@@ -662,6 +662,7 @@ a {
     margin-bottom: 20px;
 }
 .footer .container{
+    align-items: baseline;
     display: flex;
 }
 .footer-options{
@@ -675,8 +676,8 @@ a {
     align-items: center;
 }
 
-.footer-balance{
-    margin-right: 70px;
+.footer-seti{
+    margin-left: 70px;
 }
 .footer-link{
     margin: 0;
@@ -706,34 +707,33 @@ a {
     fill: currentColor;
 }
 
-.footer .form-title{
+.footer-form{
+    margin-left: 93px;
+}
+.foot-form-field{
+
+    margin-left: 73px;
+    position: relative;
+    padding:0;
     margin: 0;
-    padding: 0;
-    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column; 
+}
+.footer .form-title{
+    margin-left: 93px;
+    padding-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
-    
-    padding-top:0;
-    padding-left: 80px;
 }
-.foot-form-field{
-    position: relative;
-    padding:0;
-    margin: 0;
-    margin-bottom: 20px;
-
-    display: flex;
-    flex-direction: column; 
-}
-
 
 .foot-form-input{
     padding-left: 16px;
-    margin-left: 80px;
+    
     width: 358px;
     height: 50px;
     background-color: #2F303A;
@@ -743,12 +743,6 @@ a {
     border-radius: 4px;
 }
 .foot-btn{ 
-    margin-left: 12px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-
-    color: #FFFFFF;
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -758,16 +752,29 @@ a {
     height: 50px;
     cursor: pointer
 }
+.foot-btn .text{
+    padding-left: 25px;
+    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+}
 .foot-btn:focus,
 .foot-btn:hover{
     background-color: #188CE8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .icon-foot{
-    margin-left:10px;
+    
     position: absolute;
-    padding-left: 2px;
-    padding-top: 2px;
+    right: 28px;
+    bottom: 11%;
 }
 .container{
     width: 1200px;
@@ -819,6 +826,7 @@ a {
 }
 
 .modal{
+    padding: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -847,8 +855,9 @@ a {
     cursor: pointer;
     fill: #000000;
 }
-.modal-btd:focus + .icon-close{
-    fill: #188CE8;
+.icon-close:focus,
+.icon-close:hover{
+    fill: #2196F3;
 }
 
 .modal-btd{
@@ -864,8 +873,7 @@ a {
 
 
 .modal-title{
-    padding-top: 50px;
-    padding-bottom: 12px;
+    margin-bottom: 12px;
 
     font-style: normal;
     font-weight: 700;
@@ -878,8 +886,7 @@ a {
 }
 /* ------------------------------Forma--------------------- */
 .form{
-    width: 448px;
-    height: 40px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     
@@ -936,9 +943,22 @@ a {
     line-height: 1.2;
     letter-spacing: 0.01em;
     color: #757575;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
-
+.form-comment{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.form-comment label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: #757575;
+    margin-bottom: 4px;
+}
 .comment{
     padding: 8px;
     display: flex;
@@ -954,14 +974,20 @@ a {
     outline:1px solid #188CE8; 
 }
 
-.topic-text{
+.topic-text{ 
+    display: flex;
+    text-align: center;
+    align-items: center;
+    
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #757575;
+    margin-left: 8px;
 }
+
 .condition{
     text-decoration-line: underline;
     color: #2196F3;
@@ -991,7 +1017,9 @@ a {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-icon{
-    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
     margin-right: 8px;
     content: "";
     display: inline-block;
